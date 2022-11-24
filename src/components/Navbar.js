@@ -17,18 +17,12 @@ import {
 } from 'mdb-react-ui-kit';
 
 const Navbar = (props) => {
-  const path = {
-    home:props.path,
-    loginPage:props.path+'loginPage',
-    footer:props.path+'footer',
-
-  };
   const [showBasic, setShowBasic] = useState(false);
 
   return (
     <MDBNavbar expand='lg' light bgColor='white'>
       <MDBContainer fluid ={false}>
-        <MDBNavbarBrand href={path.home}>Putra</MDBNavbarBrand>
+        <MDBNavbarBrand href="/">Putra</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -42,12 +36,12 @@ const Navbar = (props) => {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              <MDBNavbarLink active={showBasic} aria-current='page' href='/'>
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href={path.loginPage}>Link</MDBNavbarLink>
+              <MDBNavbarLink href="/login">Login</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
