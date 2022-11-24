@@ -20,8 +20,8 @@ const Navbar = () => {
   const [showBasic, setShowBasic] = useState(false);
 
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
-      <MDBContainer fluid>
+    <MDBNavbar expand='lg' light bgColor='white'>
+      <MDBContainer fluid ={false}>
         <MDBNavbarBrand href='#'>Putra</MDBNavbarBrand>
 
         <MDBNavbarToggler

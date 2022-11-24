@@ -1,13 +1,19 @@
+import React from "react";
+
 import Navbar from "./components/Navbar";
-import LoginPage  from "./components/LoginPage";
-import Footer from "./components/Footer";
+// import LoginPage  from "./components/LoginPage";
+ import Footer from "./components/Footer";
+import GridExamplesPage from "./components/Grid";
 function App() {
   return (
-    <div>
+    <React.Fragment>
         <Navbar />
-        <LoginPage />
+        <main className="mt-5">
+            <GridExamplesPage />
+        </main>
+        {/* <LoginPage /> */}
         <Footer/>
-    </div>
+    </React.Fragment>
   );
 }
 
