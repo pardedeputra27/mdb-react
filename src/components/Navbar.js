@@ -16,13 +16,19 @@ import {
   MDBCollapse,
 } from 'mdb-react-ui-kit';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const path = {
+    home:props.path,
+    loginPage:props.path+'loginPage',
+    footer:props.path+'footer',
+
+  };
   const [showBasic, setShowBasic] = useState(false);
 
   return (
     <MDBNavbar expand='lg' light bgColor='white'>
       <MDBContainer fluid ={false}>
-        <MDBNavbarBrand href='#'>Putra</MDBNavbarBrand>
+        <MDBNavbarBrand href={path.home}>Putra</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -41,7 +47,7 @@ const Navbar = () => {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+              <MDBNavbarLink href={path.loginPage}>Link</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>

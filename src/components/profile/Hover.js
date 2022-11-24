@@ -9,7 +9,7 @@ import myFoto from '../../myFoto.png';
     rippleTag='div'
     rippleColor='light'
   >
-    <img src={myFoto} className='w-100' />
+    <img src={myFoto} className='w-100' alt='NoImage' />
     <a href='#!'>
       <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}></div>
     </a>
