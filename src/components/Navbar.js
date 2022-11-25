@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   MDBContainer,
   MDBNavbar,
-  MDBNavbarBrand,
   MDBNavbarToggler,
   MDBIcon,
   MDBNavbarNav,
   MDBNavbarItem,
-  MDBNavbarLink,
   MDBBtn,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
 
@@ -21,20 +15,21 @@ import { BrowserRouter, Switch, Route,Link } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import NoPage from "./NoPage/Blank";
 import Footer from "./Footer";
+import LoginCostum from './login/LoginCostum';
 
 const Navbar = () => {
   const [showBasic, setShowBasic] = useState(false);
-  const [active, setActive] = useState(false);
-  function HandleActive() {
-    setActive(!active);
-  }
 
-  function linkActive(check){
-          if(check){
-              return 'nav-link active text-primary';
-          }else{
-            return 'nav-link';
-          }
+  function LinkHoverIn (e){
+    if(e.target.classList.contains("active")){
+        e.target.classList.remove('active');
+        e.target.classList.remove('text-info');
+    }else{
+        e.target.classList.add('active');
+        e.target.classList.add('text-info');
+    }
+    e.preventDefault();
+
   }
 
   return (
@@ -53,16 +48,25 @@ const Navbar = () => {
 
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-              <MDBNavbarItem>
-                <Link className={linkActive(active)}  to ="/" onClick={HandleActive}>Home</Link>
+              <MDBNavbarItem className='px-1'>
+                <Link className="nav-link" color='red' to ="/"  onMouseEnter ={LinkHoverIn}>
+                <MDBIcon fas icon="home" /> Home 
+                </Link>
               </MDBNavbarItem>
-              <MDBNavbarItem>
-                <Link className={linkActive(!active)}  to ="/login" onClick={HandleActive}>Login</Link>
+              <MDBNavbarItem className='px-1'>
+                <Link className="nav-link"  to ="/login" onMouseEnter ={LinkHoverIn}> 
+                <MDBIcon fas icon="user-alt" /> Login 
+                </Link>
+              </MDBNavbarItem>
+              <MDBNavbarItem className='px-1'>
+                <Link className="nav-link"  to ="/loginCostum" onMouseEnter ={LinkHoverIn}> 
+                <MDBIcon fas icon="user-alt" /> Login Costum
+                </Link>
               </MDBNavbarItem>
             </MDBNavbarNav>
 
             <form className='d-flex input-group w-auto'>
-              <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
+              <input type='search' className='form-control' placeholder='Search One' aria-label='Search' />
               <MDBBtn color='primary'>Search</MDBBtn>
             </form>
           </MDBCollapse>
@@ -72,6 +76,7 @@ const Navbar = () => {
         <Route exact path="/"><Home /></Route>
         <Route path="/footer"><Footer /></Route>
         <Route path="/login"><LoginPage /></Route>
+        <Route path="/loginCostum"><LoginCostum /></Route>
         <Route path="*"><NoPage /></Route>
       </Switch>
     </BrowserRouter>
