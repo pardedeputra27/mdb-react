@@ -77,6 +77,7 @@ const Navbar = () => {
         <Route path="/footer"><Footer /></Route>
         <Route path="/login"><LoginPage /></Route>
         <Route path="/loginCostum"><LoginCostum /></Route>
+        <Route path="/mdb-react"><Home /></Route>
         <Route path="*"><NoPage /></Route>
       </Switch>
     </BrowserRouter>
