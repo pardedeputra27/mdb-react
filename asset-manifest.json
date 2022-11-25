@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mdb-react/static/css/main.79ac8f10.css",
-    "main.js": "/mdb-react/static/js/main.55fda57a.js",
+    "main.js": "/mdb-react/static/js/main.10f22003.js",
     "static/js/787.e906a1b8.chunk.js": "/mdb-react/static/js/787.e906a1b8.chunk.js",
     "static/media/fa-solid-900.ttf": "/mdb-react/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
     "static/media/fa-brands-400.ttf": "/mdb-react/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.woff2": "/mdb-react/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
     "index.html": "/mdb-react/index.html",
     "main.79ac8f10.css.map": "/mdb-react/static/css/main.79ac8f10.css.map",
-    "main.55fda57a.js.map": "/mdb-react/static/js/main.55fda57a.js.map",
+    "main.10f22003.js.map": "/mdb-react/static/js/main.10f22003.js.map",
     "787.e906a1b8.chunk.js.map": "/mdb-react/static/js/787.e906a1b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79ac8f10.css",
-    "static/js/main.55fda57a.js"
+    "static/js/main.10f22003.js"
   ]
 }
